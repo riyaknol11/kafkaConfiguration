@@ -21,7 +21,7 @@ public class HelloKafkaController {
 
 
     @Autowired
-    private final KafkaTemplate<String, Object> template;
+    private final KafkaTemplate<String, String> template;
     private final String topicName;
     private final int messagesPerRequest;
     private CountDownLatch latch;
@@ -31,7 +31,7 @@ public class HelloKafkaController {
 
 
     public HelloKafkaController(
-            final KafkaTemplate<String, Object> template,
+            final KafkaTemplate<String, String> template,
             @Value("${tpd.topic-name}") final String topicName,
             @Value("${tpd.messages-per-request}") final int messagesPerRequest) {
         this.template = template;
