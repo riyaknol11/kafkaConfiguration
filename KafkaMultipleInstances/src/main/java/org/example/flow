@@ -1,0 +1,5 @@
+1. Create properties object for the producer
+2. Create the producer
+3. Create the producer record
+4. Send data asynchronously
+5. flush and close the producer
